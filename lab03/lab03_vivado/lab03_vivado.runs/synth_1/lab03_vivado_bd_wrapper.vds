@@ -1,0 +1,318 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Jul  8 09:39:34 2025
+# Process ID: 3126631
+# Current directory: /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1
+# Command line: vivado -log lab03_vivado_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab03_vivado_bd_wrapper.tcl
+# Log file: /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/lab03_vivado_bd_wrapper.vds
+# Journal file: /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/vivado.jou
+# Running On: unlabblackbox, OS: Linux, CPU Frequency: 4829.270 MHz, CPU Physical cores: 10, Host memory: 33418 MB
+#-----------------------------------------------------------
+source lab03_vivado_bd_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.srcs/utils_1/imports/synth_1/lab03_vivado_bd_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.srcs/utils_1/imports/synth_1/lab03_vivado_bd_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top lab03_vivado_bd_wrapper -part xczu48dr-ffvg1517-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3127183
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2567.258 ; gain = 328.801 ; free physical = 10051 ; free virtual = 26143
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3540.312; parent = 2567.262; children = 973.051
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lab03_vivado_bd_wrapper' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/hdl/lab03_vivado_bd_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'lab03_vivado_bd' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:12]
+INFO: [Synth 8-6157] synthesizing module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/.Xil/Vivado-3126631-unlabblackbox/realtime/lab03_vivado_bd_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' (0#1) [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/.Xil/Vivado-3126631-unlabblackbox/realtime/lab03_vivado_bd_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'maxigp0_awid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awaddr' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awlen' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awsize' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awburst' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awlock' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awcache' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awprot' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awvalid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_wdata' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_wstrb' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_wlast' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_wvalid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_bready' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_araddr' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arlen' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arsize' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arburst' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arlock' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arcache' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arprot' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arvalid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_rready' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_awqos' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp0_arqos' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awaddr' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awlen' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awsize' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awburst' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awlock' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awcache' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awprot' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awvalid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_wdata' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_wstrb' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_wlast' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_wvalid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_bready' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_araddr' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arlen' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arsize' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arburst' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arlock' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arcache' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arprot' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arvalid' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_rready' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_awqos' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'maxigp1_arqos' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'emio_gpio_o' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'emio_gpio_t' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7071] port 'pl_resetn0' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'lab03_vivado_bd_zynq_ultra_ps_e_0_0' has 86 connections declared, but only 27 given [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'lab03_vivado_bd' (0#1) [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/synth/lab03_vivado_bd.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'lab03_vivado_bd_wrapper' (0#1) [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/hdl/lab03_vivado_bd_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2629.227 ; gain = 390.770 ; free physical = 9999 ; free virtual = 26091
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3602.281; parent = 2629.230; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2644.070 ; gain = 405.613 ; free physical = 9992 ; free virtual = 26085
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3617.125; parent = 2644.074; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2644.070 ; gain = 405.613 ; free physical = 9991 ; free virtual = 26083
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3617.125; parent = 2644.074; children = 973.051
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2644.070 ; gain = 0.000 ; free physical = 9988 ; free virtual = 26081
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'lab03_vivado_bd_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'lab03_vivado_bd_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2731.852 ; gain = 0.000 ; free physical = 9991 ; free virtual = 26084
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2731.852 ; gain = 0.000 ; free physical = 9991 ; free virtual = 26084
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2731.852 ; gain = 493.395 ; free physical = 10074 ; free virtual = 26167
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3672.891; parent = 2699.840; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2731.852 ; gain = 493.395 ; free physical = 10074 ; free virtual = 26167
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3672.891; parent = 2699.840; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for lab03_vivado_bd_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for lab03_vivado_bd_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2731.852 ; gain = 493.395 ; free physical = 10074 ; free virtual = 26167
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3672.891; parent = 2699.840; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2731.852 ; gain = 493.395 ; free physical = 10073 ; free virtual = 26167
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3672.891; parent = 2699.840; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2731.852 ; gain = 493.395 ; free physical = 10071 ; free virtual = 26169
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1917.096; parent = 1734.923; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3672.891; parent = 2699.840; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3082.523 ; gain = 844.066 ; free physical = 9749 ; free virtual = 25846
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2393.702; parent = 2211.561; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4055.578; parent = 3082.527; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3082.523 ; gain = 844.066 ; free physical = 9749 ; free virtual = 25847
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2393.831; parent = 2211.689; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4055.578; parent = 3082.527; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3101.555 ; gain = 863.098 ; free physical = 9727 ; free virtual = 25825
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.362; parent = 2212.221; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4074.609; parent = 3101.559; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9737 ; free virtual = 25835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.589; parent = 2212.447; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9737 ; free virtual = 25835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.604; parent = 2212.463; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9737 ; free virtual = 25835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.620; parent = 2212.479; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9737 ; free virtual = 25835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.698; parent = 2212.557; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9737 ; free virtual = 25835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.698; parent = 2212.557; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9737 ; free virtual = 25835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.714; parent = 2212.572; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------+----------+
+|      |BlackBox name                       |Instances |
++------+------------------------------------+----------+
+|1     |lab03_vivado_bd_zynq_ultra_ps_e_0_0 |         1|
++------+------------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------+------+
+|      |Cell                              |Count |
++------+----------------------------------+------+
+|1     |lab03_vivado_bd_zynq_ultra_ps_e_0 |     1|
++------+----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.492 ; gain = 869.035 ; free physical = 9740 ; free virtual = 25837
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2394.745; parent = 2212.604; children = 182.173
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.547; parent = 3107.496; children = 973.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3107.492 ; gain = 781.254 ; free physical = 9739 ; free virtual = 25837
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3107.500 ; gain = 869.035 ; free physical = 9739 ; free virtual = 25836
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3107.500 ; gain = 0.000 ; free physical = 9739 ; free virtual = 25836
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3156.086 ; gain = 0.000 ; free physical = 9768 ; free virtual = 25866
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e6662852
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3170.023 ; gain = 1870.734 ; free physical = 9937 ; free virtual = 26034
+INFO: [Common 17-1381] The checkpoint '/home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/lab03_vivado_bd_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lab03_vivado_bd_wrapper_utilization_synth.rpt -pb lab03_vivado_bd_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  8 09:39:58 2025...

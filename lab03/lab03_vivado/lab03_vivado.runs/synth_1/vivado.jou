@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Jul  8 09:39:34 2025
+# Process ID: 3126631
+# Current directory: /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1
+# Command line: vivado -log lab03_vivado_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab03_vivado_bd_wrapper.tcl
+# Log file: /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/lab03_vivado_bd_wrapper.vds
+# Journal file: /home/sergi/Desktop/zynq_essencial/lab03/lab03_vivado/lab03_vivado.runs/synth_1/vivado.jou
+# Running On: unlabblackbox, OS: Linux, CPU Frequency: 4829.270 MHz, CPU Physical cores: 10, Host memory: 33418 MB
+#-----------------------------------------------------------
+source lab03_vivado_bd_wrapper.tcl -notrace

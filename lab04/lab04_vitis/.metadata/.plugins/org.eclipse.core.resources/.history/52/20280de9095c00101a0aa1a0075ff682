@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="hello_world" location="/home/sergi/Desktop/zynq_essencial/lab04/lab04_vitis/hello_world" platform="/home/sergi/Desktop/zynq_essencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/lab04_platform.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="hello_world_system" sysConfig="lab04_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="f53887127d7846051a176f53ddd39451">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.2059718390">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.635693856" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
