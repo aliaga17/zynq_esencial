@@ -1,0 +1,18 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.821634",
+   "Default View_TopLeft":"-100,-82",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_uart_tx -pg 1 -lvl 2 -x 670 -y 150 -defaultsOSRD
+preplace port port-id_uart_rx -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 330 -y 140 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 2 20 10 650
+preplace netloc zynq_ultra_ps_e_0_emio_uart0_txd 1 1 1 N 150
+preplace netloc uart_rx_1 1 0 2 NJ 270 640
+levelinfo -pg 1 0 330 670
+pagesize -pg 1 -db -bbox -sgen -100 0 770 290
+"
+}
+0

@@ -1,0 +1,19 @@
+11:42:17 DEBUG : Logs will be stored at '/home/sergi/Desktop/zynq_esencial/lab05/lab05vitis/IDE.log'.
+11:42:18 INFO  : Launching XSCT server: xsct -n  -interactive /home/sergi/Desktop/zynq_esencial/lab05/lab05vitis/temp_xsdb_launch_script.tcl
+11:42:18 INFO  : Platform repository initialization has completed.
+11:42:18 INFO  : Registering command handlers for Vitis TCF services
+11:42:19 INFO  : XSCT server has started successfully.
+11:42:19 INFO  : Successfully done setting XSCT server connection channel  
+11:42:19 INFO  : Successfully done query RDI_DATADIR 
+11:42:19 INFO  : Successfully done setting workspace for the tool. 
+11:42:20 INFO  : plnx-install-location is set to ''
+11:43:35 INFO  : Result from executing command 'getProjects': lab05_platform
+11:43:35 INFO  : Result from executing command 'getPlatforms': 
+11:45:18 INFO  : Result from executing command 'getProjects': lab05_platform
+11:45:18 INFO  : Result from executing command 'getPlatforms': lab05_platform|/home/sergi/Desktop/zynq_esencial/lab05/lab05vitis/lab05_platform/export/lab05_platform/lab05_platform.xpfm
+11:45:21 INFO  : Checking for BSP changes to sync application flags for project 'hellow_world'...
+11:45:28 ERROR : (XSDB Server)readelf: Error: '/home/sergi/Desktop/zynq_esencial/lab05/lab05vitis/lab05_platform/export/lab05_platform/sw/fsbl.elf': No such file
+
+12:09:05 INFO  : Checking for BSP changes to sync application flags for project 'hellow_world'...
+12:09:07 ERROR : (XSDB Server)readelf: Error: '/home/sergi/Desktop/zynq_esencial/lab05/lab05vitis/lab05_platform/export/lab05_platform/sw/fsbl.elf': No such file
+

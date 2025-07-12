@@ -26,3 +26,5 @@ platform active {lab04_platform}
 bsp reload
 bsp reload
 platform active {lab04_platform}
+platform active {lab04_platform}
+platform generate

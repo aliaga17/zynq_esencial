@@ -246,3 +246,153 @@ Troubleshooting hints:
 1. Check whether board is connected to system properly.
 2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
 3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:28:26 DEBUG : Logs will be stored at '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/IDE.log'.
+10:28:26 INFO  : Launching XSCT server: xsct -n  -interactive /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/temp_xsdb_launch_script.tcl
+10:28:27 INFO  : XSCT server has started successfully.
+10:28:27 INFO  : Successfully done setting XSCT server connection channel  
+10:28:27 INFO  : plnx-install-location is set to ''
+10:28:28 INFO  : Successfully done setting workspace for the tool. 
+10:28:28 INFO  : Successfully done query RDI_DATADIR 
+10:28:28 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+10:28:28 INFO  : Platform repository initialization has completed.
+10:28:28 INFO  : Registering command handlers for Vitis TCF services
+10:28:45 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_hello_world-Default'. 
+Make sure that the application 'hello_world' is built properly for configuration 'Debug' before launching.
+10:28:56 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_hello_world-Default'. 
+Make sure that the application 'hello_world' is built properly for configuration 'Debug' before launching.
+10:29:10 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_hello_world-Default'. 
+Make sure that the application 'hello_world' is built properly for configuration 'Debug' before launching.
+10:29:34 INFO  : Result from executing command 'getProjects': lab04_platform
+10:29:34 INFO  : Result from executing command 'getPlatforms': 
+10:29:49 INFO  : XRT server has started successfully on port '4355'
+10:29:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:50 INFO  : Jtag cable 'Digilent JTAG-HS3 210299B93AA5' is selected.
+10:29:50 INFO  : 'jtag frequency' command is executed.
+10:29:50 INFO  : Sourcing of '/tools/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:29:50 INFO  : Context for 'APU' is selected.
+10:29:50 INFO  : System reset is completed.
+10:29:53 INFO  : 'after 3000' command is executed.
+10:29:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299B93AA5" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299B93AA5-147fb093-0"}' command is executed.
+10:30:13 INFO  : Device configured successfully with "/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/_ide/bitstream/lab03_vivado_bd_wrapper.bit"
+10:30:13 INFO  : Context for 'APU' is selected.
+10:30:13 INFO  : Hardware design and registers information is loaded from '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/hw/lab03_vivado_bd_wrapper.xsa'.
+10:30:13 INFO  : 'configparams force-mem-access 1' command is executed.
+10:30:13 INFO  : Context for 'APU' is selected.
+10:30:13 INFO  : Boot mode is read from the target.
+10:30:13 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:30:13 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:30:13 INFO  : The application '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:30:13 INFO  : 'set bp_30_13_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:30:16 INFO  : 'con -block -timeout 60' command is executed.
+10:30:16 INFO  : 'bpremove $bp_30_13_fsbl_bp' command is executed.
+10:30:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:30:16 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:30:17 INFO  : The application '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/Debug/hello_world.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:30:17 INFO  : 'configparams force-mem-access 0' command is executed.
+10:30:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299B93AA5" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299B93AA5-147fb093-0"}
+fpga -file /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/_ide/bitstream/lab03_vivado_bd_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/hw/lab03_vivado_bd_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/boot/fsbl.elf
+set bp_30_13_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_30_13_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:30:17 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:30:17 INFO  : 'con' command is executed.
+10:30:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:30:17 INFO  : Launch script is exported to file '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world_system/_ide/scripts/systemdebugger_hello_world_system_standalone.tcl'
+10:31:16 INFO  : Disconnected from the channel tcfchan#2.
+10:31:21 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+10:31:23 ERROR : (XSDB Server)readelf: Error: '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/fsbl.elf': No such file
+
+10:31:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:31:51 INFO  : Jtag cable 'Digilent JTAG-HS3 210299B93AA5' is selected.
+10:31:51 INFO  : 'jtag frequency' command is executed.
+10:31:51 INFO  : Sourcing of '/tools/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:31:51 INFO  : Context for 'APU' is selected.
+10:31:51 INFO  : System reset is completed.
+10:31:54 INFO  : 'after 3000' command is executed.
+10:31:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299B93AA5" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299B93AA5-147fb093-0"}' command is executed.
+10:32:14 INFO  : Device configured successfully with "/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/_ide/bitstream/lab03_vivado_bd_wrapper.bit"
+10:32:14 INFO  : Context for 'APU' is selected.
+10:32:14 INFO  : Hardware design and registers information is loaded from '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/hw/lab03_vivado_bd_wrapper.xsa'.
+10:32:14 INFO  : 'configparams force-mem-access 1' command is executed.
+10:32:14 INFO  : Context for 'APU' is selected.
+10:32:14 INFO  : Boot mode is read from the target.
+10:32:14 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:32:14 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:32:14 INFO  : The application '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:32:15 INFO  : 'set bp_32_14_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:32:17 INFO  : 'con -block -timeout 60' command is executed.
+10:32:17 INFO  : 'bpremove $bp_32_14_fsbl_bp' command is executed.
+10:32:17 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:32:17 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:32:17 INFO  : The application '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/Debug/hello_world.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:32:17 INFO  : 'configparams force-mem-access 0' command is executed.
+10:32:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299B93AA5" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299B93AA5-147fb093-0"}
+fpga -file /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/_ide/bitstream/lab03_vivado_bd_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/hw/lab03_vivado_bd_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/boot/fsbl.elf
+set bp_32_14_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_32_14_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:32:17 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:32:17 INFO  : 'con' command is executed.
+10:32:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:32:17 INFO  : Launch script is exported to file '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/hello_world_system/_ide/scripts/debugger_hello_world-default.tcl'
+10:33:01 INFO  : Disconnected from the channel tcfchan#4.
+12:08:33 DEBUG : Logs will be stored at '/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/IDE.log'.
+12:08:33 INFO  : Launching XSCT server: xsct -n  -interactive /home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/temp_xsdb_launch_script.tcl
+12:08:34 INFO  : XSCT server has started successfully.
+12:08:34 INFO  : plnx-install-location is set to ''
+12:08:34 INFO  : Successfully done setting XSCT server connection channel  
+12:08:34 INFO  : Successfully done setting workspace for the tool. 
+12:08:34 INFO  : Platform repository initialization has completed.
+12:08:34 INFO  : Successfully done query RDI_DATADIR 
+12:08:35 INFO  : Registering command handlers for Vitis TCF services

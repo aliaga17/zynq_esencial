@@ -1,0 +1,10 @@
+timestamp=[2025-07-12 11:42:18], mode=WORKBENCH_START, duration=0:00:02.782, duration_ms=2782, data={}
+timestamp=[2025-07-12 11:42:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.017, duration_ms=17, data={}
+timestamp=[2025-07-12 11:42:18], mode=WORKBENCH_UI_INIT, duration=0:00:00.206, duration_ms=206, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-07-12 11:43:35], mode=PLATFORM_CREATION, duration=0:00:07.107, duration_ms=7107, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2025-07-12 11:44:56], mode=APP_CREATION, duration=0:00:01.416, duration_ms=1416, data={name=hellow_world, project_type=sdk, os=standalone, processor=cortex-a53, runtime=C/C++, platform=lab05_platform, application_type=application}
+timestamp=[2025-07-12 11:45:21], mode=PLATFORM_GENERATION, duration=0:00:19.822, duration_ms=19822, data={name=lab05_platform}
+timestamp=[2025-07-12 11:45:27], mode=BUILD, duration=0:00:00.276, duration_ms=276, data={name=hellow_world, configuration=Debug, clean_build=false}
+timestamp=[2025-07-12 11:45:33], mode=BUILD, duration=0:00:05.532, duration_ms=5532, data={name=hellow_world_system, configuration=Debug, clean_build=false}
+timestamp=[2025-07-12 12:09:05], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=hellow_world, configuration=Debug, clean_build=false}
+timestamp=[2025-07-12 12:09:11], mode=BUILD, duration=0:00:05.534, duration_ms=5534, data={name=hellow_world_system, configuration=Debug, clean_build=false}

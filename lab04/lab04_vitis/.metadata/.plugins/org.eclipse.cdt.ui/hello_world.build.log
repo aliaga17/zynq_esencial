@@ -1,13 +1,18 @@
-10:43:21 **** Incremental Build of configuration Debug for project hello_world ****
+10:31:21 **** Build of configuration Debug for project hello_world ****
 make all 
 Building file: ../src/helloworld.c
 Invoking: ARM v8 gcc compiler
-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/sergi/Desktop/zynq_essencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
  
 Building target: hello_world.elf
 Invoking: ARM v8 gcc linker
-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sergi/Desktop/zynq_essencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/standalone_domain/bsplib/lib -o "hello_world.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sergi/Desktop/zynq_esencial/lab04/lab04_vitis/lab04_platform/export/lab04_platform/sw/lab04_platform/standalone_domain/bsplib/lib -o "hello_world.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group
 Finished building target: hello_world.elf
  
 Invoking: ARM v8 Print Size
@@ -17,5 +22,5 @@ aarch64-none-elf-size hello_world.elf  |tee "hello_world.elf.size"
 Finished building: hello_world.elf.size
  
 
-10:43:22 Build Finished (took 370ms)
+10:31:21 Build Finished (took 271ms)
 
