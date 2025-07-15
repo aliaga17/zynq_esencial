@@ -1,0 +1,8 @@
+
+/* User Definitions */
+#define LED0_G_PIN 20
+#define LED1_R_PIN 21
+
+int main(void){
+
+}

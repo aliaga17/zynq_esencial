@@ -16,3 +16,21 @@ platform write
 platform generate -domains 
 platform active {lab05_platform}
 platform generate
+platform active {lab05_platform}
+bsp reload
+bsp reload
+bsp setlib -name xiltimer -ver 1.1
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain 
+bsp reload
+bsp reload
+platform config -updatehw {/home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab03_vivado_bd_wrapper.xsa}
+platform generate -domains 
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp config stdin "psu_uart_0"
+bsp write
+bsp config stdin "psu_uart_0"
+bsp write

@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Sat Jul 12 11:38:04 2025
+-- Date        : Mon Jul 14 15:06:57 2025
 -- Host        : unlabblackbox running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0_sim_netlist.vhdl

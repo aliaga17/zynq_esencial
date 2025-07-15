@@ -11,7 +11,8 @@
       "validated": "true"
     },
     "design_tree": {
-      "zynq_ultra_ps_e_0": ""
+      "zynq_ultra_ps_e_0": "",
+      "system_ila_0": ""
     },
     "ports": {
       "uart_tx": {
@@ -3082,26 +3083,43 @@
             }
           }
         }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "lab03_vivado_bd_system_ila_0_0",
+        "xci_path": "ip/lab03_vivado_bd_system_ila_0_0/lab03_vivado_bd_system_ila_0_0.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "2"
+          }
+        }
       }
     },
     "nets": {
       "uart_rx_1": {
         "ports": [
           "uart_rx",
-          "zynq_ultra_ps_e_0/emio_uart0_rxd"
+          "zynq_ultra_ps_e_0/emio_uart0_rxd",
+          "system_ila_0/probe0"
         ]
       },
       "zynq_ultra_ps_e_0_emio_uart0_txd": {
         "ports": [
           "zynq_ultra_ps_e_0/emio_uart0_txd",
-          "uart_tx"
+          "uart_tx",
+          "system_ila_0/probe1"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_clk0",
           "zynq_ultra_ps_e_0/maxihpm1_fpd_aclk",
-          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk"
+          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
+          "system_ila_0/clk"
         ]
       }
     }

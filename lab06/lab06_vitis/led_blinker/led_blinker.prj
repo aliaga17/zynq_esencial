@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="led_blinker" location="/home/sergi/Desktop/zynq_esencial/lab06/lab06_vitis/led_blinker" platform="/home/sergi/Desktop/zynq_esencial/lab06/lab06_vitis/lab06_platform/export/lab06_platform/lab06_platform.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="led_blinker_system" sysConfig="lab06_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="f53887127d7846051a176f53ddd39451">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.820234139">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1695996662" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

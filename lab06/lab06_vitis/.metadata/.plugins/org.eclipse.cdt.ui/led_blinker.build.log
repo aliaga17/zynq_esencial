@@ -1,0 +1,29 @@
+17:31:58 **** Incremental Build of configuration Debug for project led_blinker ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/sergi/Desktop/zynq_esencial/lab06/lab06_vitis/lab06_platform/export/lab06_platform/sw/lab06_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:
+../src/main.c: In function 'main':
+/home/sergi/Desktop/zynq_esencial/lab06/lab06_vitis/lab06_platform/export/lab06_platform/sw/lab06_platform/standalone_domain/bspinclude/include/xparameters.h:923:34: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} changes value from '4278845440' to '0' [-Woverflow]
+  923 | #define XPAR_PSU_GPIO_0_BASEADDR 0xFF0A0000
+      |                                  ^~~~~~~~~~
+../src/main.c:18:42: note: in expansion of macro 'XPAR_PSU_GPIO_0_BASEADDR'
+   18 |         ConfigPtr = XGpioPs_LookupConfig(XPAR_PSU_GPIO_0_BASEADDR);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: led_blinker.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sergi/Desktop/zynq_esencial/lab06/lab06_vitis/lab06_platform/export/lab06_platform/sw/lab06_platform/standalone_domain/bsplib/lib -o "led_blinker.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group
+Finished building target: led_blinker.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size led_blinker.elf  |tee "led_blinker.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35909	   2360	  20851	  59120	   e6f0	led_blinker.elf
+Finished building: led_blinker.elf.size
+ 
+
+17:31:59 Build Finished (took 224ms)
+

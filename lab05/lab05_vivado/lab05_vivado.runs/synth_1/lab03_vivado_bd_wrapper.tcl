@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu48dr-ffvg1517-2-e
 
@@ -79,6 +80,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.cache/wt [current_project]
 set_property parent.project_path /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.cache/ip [current_project]
@@ -89,6 +91,12 @@ read_verilog -library xil_defaultlib /home/sergi/Desktop/zynq_esencial/lab05/lab
 add_files /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.srcs/sources_1/bd/lab03_vivado_bd/lab03_vivado_bd.bd
 set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_zynq_ultra_ps_e_0_0/lab03_vivado_bd_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_synthesis false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_system_ila_0_0/bd_0/ip/ip_0/bd_a256_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_system_ila_0_0/bd_0/bd_a256_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/ip/lab03_vivado_bd_system_ila_0_0/lab03_vivado_bd_system_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.gen/sources_1/bd/lab03_vivado_bd/lab03_vivado_bd_ooc.xdc]
 
 OPTRACE "Adding files" END { }

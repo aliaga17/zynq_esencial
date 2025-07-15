@@ -122,6 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 4
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu48dr-ffvg1517-2-e
@@ -133,6 +134,7 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.xpr [current_project]
   set_property ip_output_repo /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/sergi/Desktop/zynq_esencial/lab05/lab05_vivado/lab05_vivado.runs/synth_1/lab03_vivado_bd_wrapper.dcp
@@ -308,6 +310,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi lab03_vivado_bd_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

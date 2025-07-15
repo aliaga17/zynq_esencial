@@ -1,0 +1,44 @@
+
+/* AMD Xilinx libraries */
+#include "xparameters.h"
+#include "xgpiops.h"
+#include "sleep.h"
+
+/* User Definitions */
+#define LED0_G_PIN 20
+#define LED1_R_PIN 21
+
+XGpioPs Gpio;
+
+int main(void){
+
+	XGpioPs_Config *ConfigPtr;
+	int led_status = 0;
+
+	ConfigPtr = XGpioPs_LookupConfig(XPAR_PSU_GPIO_0_BASEADDR);
+
+	XGpioPs_CfgInitialize(&Gpio, ConfigPtr, ConfigPtr->BaseAddr);
+
+	/* Set Pin Direction */
+	XGpioPs_SetDirectionPin(&Gpio, LED0_G_PIN, 1);
+	XGpioPs_SetDirectionPin(&Gpio, LED1_R_PIN, 1);
+
+	/* Set output enable */
+	XGpioPs_SetOutputEnablePin(&Gpio, LED0_G_PIN, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, LED1_R_PIN, 1);
+
+	/* Set Initial Value */
+	XGpioPs_WritePin(&Gpio, LED0_G_PIN, 1);
+	XGpioPs_WritePin(&Gpio, LED1_R_PIN, 1);
+
+	while(1){
+		sleep(1);
+
+		led_status = XGpioPs_ReadPin(&Gpio, LED0_G_PIN);
+
+		XGpioPs_WritePin(&Gpio, LED0_G_PIN, !led_status);
+		XGpioPs_WritePin(&Gpio, LED1_R_PIN, led_status);
+	}
+
+	return 0;
+}
